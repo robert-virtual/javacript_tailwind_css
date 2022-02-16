@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="p-4 flex flex-col items-center">
+      <div id="dropzone" class="dropzone">
+        <p>arraste su imagen aqui</p>
+      </div>
+
+      <div class="m-4 hidden flex flex-col items-center" id="imgs">
+        <div class="flex items-center">
+          <button
+            class="bg-gray-200 rounded-full p-2 hover:bg-gray-300"
+            id="previous"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <img id="img" src="" alt="" />
+          <button
+            class="bg-gray-200 rounded-full p-2 hover:bg-gray-300"
+            id="next"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+        <p id="items"></p>
+      </div>
+
+      <button
+        id="show-modal"
+        class="min-w-[100px] bg-blue-500 text-white m-4 p-2 rounded-md hover:bg-blue-600"
+      >
+        modal
+      </button>
+      <div id="result-modal" class="hidden"></div>
+      <div
+        id="modal"
+        class="hidden grid bg-opacity-75 place-items-center bg-gray-300 fixed top-0 left-0 w-full h-full"
+      >
+        <div
+          class="relative shadow-md rounded-md px-12 py-20 bg-white w-[500px] h-[400px] text-black"
+        >
+          <div>
+            <h3 class="text-xl text-center">Hola Este es el modal</h3>
+            <input
+              id="nombre"
+              class="block border-solid border-2 border-gray-100 p-2 rounded-md my-2"
+              type="text"
+              placeholder="nombre"
+            />
+            <input
+              id="correo"
+              class="block border-solid border-2 border-gray-100 p-2 rounded-md my-2"
+              type="email"
+              placeholder="correo"
+            />
+          </div>
+          <button
+            id="close-modal"
+            class="absolute -right-16 bg-white -top-16 m-4 p-2 rounded-md hover:bg-gray-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <button
+            id="modal-ok"
+            class="absolute bottom-10 right-10 min-w-[100px] bg-blue-500 text-white m-4 p-2 rounded-md hover:bg-blue-600"
+          >
+            ok
+          </button>
+        </div>
+      </div>
+      <script type="module" src="js/main.js"></script>
+    </main>
+  </body>
+</html>

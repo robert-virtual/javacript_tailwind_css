@@ -1,0 +1,25 @@
+* {
+  font-family: sans-serif;
+}
+.dropzone {
+  display: grid;
+  font-size: 2rem;
+  background-color: white;
+  place-items: center;
+  width: 500px;
+  height: 500px;
+  border: 4px dashed gray;
+}
+
+.dropping {
+  border-color: blueviolet;
+  color: blueviolet;
+  animation: pulse 1s infinite;
+}
+.hidden {
+  display: none;
+}
+img {
+  margin: 1rem;
+  width: 80vw;
+}
